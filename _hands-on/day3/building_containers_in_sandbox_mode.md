@@ -1,6 +1,6 @@
 ---
 topic: singularity
-title: Tutorial5 - Building Singularity container images in sandbox mode
+title: Tutorial6(Bonus) - Building Singularity container images in sandbox mode
 ---
 
 # Building Singularity containers in sandbox mode
