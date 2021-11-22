@@ -1,6 +1,6 @@
 ---
 topic: containers
-title: Tutorial - Hello world Singularity
+title: Tutorial2 - Hello world Singularity
 ---
 
 # Singularity tutorial

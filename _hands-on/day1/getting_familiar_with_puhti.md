@@ -1,6 +1,6 @@
 ---
 topic: containers
-title: Tutorial - Getting familiar with Puhti
+title: Tutorial1 - Getting familiar with Puhti
 ---
 # Getting familiar with Puhti
 

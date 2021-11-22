@@ -1,6 +1,6 @@
 ---
 topic: bioapplications
-title: Tutorial - Using existing images
+title: Tutorial2 - Using existing Singularity images
 ---
 
 # Using existing Singularity images
