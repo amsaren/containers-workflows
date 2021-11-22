@@ -62,7 +62,7 @@ ls -l results/
 By using `-resume` flag, the resulting files from previous analysis are simply copied to folder *results* .
 
 ### Understanding nextflow channels and operators 
-Channels and operators as core features of nextflow. Please read and learn different ways of creating [Channels](https://www.nextflow.io/docs/latest/channel.html) and [operators](https://www.nextflow.io/docs/latest/operator.html) to manupulate content of channels.  annd `set`
+Channels and operators as core features of nextflow. Please read and learn different ways of creating [Channels](https://www.nextflow.io/docs/latest/channel.html) and [operators](https://www.nextflow.io/docs/latest/operator.html) to manupulate content of channels.  
 
 Here are few examples on how one can create channels in nextflow script:
 ```nextflow

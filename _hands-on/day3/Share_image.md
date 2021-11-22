@@ -25,7 +25,7 @@ This exercise requires a workstation with docker client installed and thus can't
    inside the container as shown below:
   
    ```bash
-   apt-get install vim
+   apt-get update && apt-get install -y vim
    ```
    use Ctrl + p then Ctrl + q on terminal to detach from container. 
 
@@ -63,7 +63,7 @@ This exercise requires a workstation with docker client installed and thus can't
  
      ```bash
       docker login # authenticate yourself using DockerHub credentials
-      docker push your-dockerhub-user-name/image-name[:tag]  # docker push your-dockerhub-user-name/fastqc-vim:test
+      docker push your-dockerhub-user-name/repo-name[:tag]  # docker push your-dockerhub-user-name/fastqc-vim:test
       ```
     Once the push  to repository is successful, your image is now available for everyone to use. Go to your profile page on the DockerHub  to view  your new docker 
     image.
