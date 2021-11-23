@@ -168,7 +168,7 @@ run one such application.
    ```
 
 3. Copy the following contents into the file and change "project_xxxx" to the correct project name:
-    ```bash
+   ```bash
     #!/bin/bash
     #SBATCH --job-name=test
     #SBATCH --account=project_xxxx
@@ -192,7 +192,7 @@ run one such application.
     -p B1_sub_R2_trimmed.fq \
     B1_sub_R1.fq B1_sub_R2.fq
 
-    ```
+   ```
     💬 Note that in the above example the command line is quite long, so we have used escape charecter "\" to escape (i.e. ignore)
     new line characters. From the computer's point of view the whole singularity_wrapper command is just a single line.
 
