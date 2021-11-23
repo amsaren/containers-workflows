@@ -130,7 +130,7 @@ mafft cesy3.fasta > cesy3_aln.fasta
     ```bash
    sbatch test.sh
     ```
-`
+
 4. Study the results:
 
 - What files were created?
