@@ -106,21 +106,21 @@ data. To use them we must first load the `biokit` module.
     nano mafft.sh
     ```
 2. Copy the following contents into the file and change "project_xxxx" to the correct project name:
-    ```bash
-    #!/bin/bash
-    #SBATCH --job-name=test           # Name of the job visible in the queue.
-    #SBATCH --account=project_xxxx    # Choose the billing project. Has to be defined!
-    #SBATCH --partition=test          # Job queues: test, interactive, small, large, longrun, hugemem, hugemem_longrun
-    #SBATCH --time=00:10:00           # Maximum duration of the job. Max: depends of the partition. 
-    #SBATCH --mem=8G                  # How much RAM is reserved for job per node.
-    #SBATCH --ntasks=1                # Number of tasks. Max: depends on partition.
-    #SBATCH --cpus-per-task=1         # How many processors work on one task. Max: Number of CPUs per node.
+```bash
+#!/bin/bash
+#SBATCH --job-name=test           # Name of the job visible in the queue.
+#SBATCH --account=project_xxxx    # Choose the billing project. Has to be defined!
+#SBATCH --partition=test          # Job queues: test, interactive, small, large, longrun, hugemem, hugemem_longrun
+#SBATCH --time=00:10:00           # Maximum duration of the job. Max: depends of the partition. 
+#SBATCH --mem=8G                  # How much RAM is reserved for job per node.
+#SBATCH --ntasks=1                # Number of tasks. Max: depends on partition.
+#SBATCH --cpus-per-task=1         # How many processors work on one task. Max: Number of CPUs per node.
 
-    # 
-    module load biokit
-    mafft cesy3.fasta > cesy3_aln.fasta
+# 
+module load biokit
+mafft cesy3.fasta > cesy3_aln.fasta
    
-    ```
+```
 
     💬 In nano you can use `ctrl + o` to save and `ctrl + x` to exit.
 
