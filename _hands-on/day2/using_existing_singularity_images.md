@@ -131,6 +131,7 @@ if you plan to use it, to make sure correct image is used.
     nano test.sh
     ```
 2. Copy the following contents into the file and change "project_xxxx" to the correct project name:
+
     ```bash
    #!/bin/bash
    #SBATCH --job-name=test
@@ -150,6 +151,7 @@ if you plan to use it, to make sure correct image is used.
     ```bash
    sbatch test.sh
     ```
+
 ## Using a containerized application available as a module
 
 Some software available in CSC has bee installed as containers. In this example we will
@@ -168,31 +170,33 @@ run one such application.
    ```
 
 3. Copy the following contents into the file and change "project_xxxx" to the correct project name:
+   
    ```bash
-    #!/bin/bash
-    #SBATCH --job-name=test
-    #SBATCH --account=project_xxxx
-    #SBATCH --partition=test
-    #SBATCH --time=00:10:00
-    #SBATCH --mem=1G
-    #SBATCH --ntasks=1
-    #SBATCH --cpus-per-task=1
+   #!/bin/bash
+   #SBATCH --job-name=test
+   #SBATCH --account=project_xxxx
+   #SBATCH --partition=test
+   #SBATCH --time=00:10:00
+   #SBATCH --mem=1G
+   #SBATCH --ntasks=1
+   #SBATCH --cpus-per-task=1
 
-    # Load the software module
-    module load cutadapt/3.4
+   # Load the software module
+   module load cutadapt/3.4
 
-    # The module sets $SING_IMAGE, so we can omit image file in command
-    singularity_wrapper exec cutadapt \
-    -a ^GTGCCAGCMGCCGCGGTAA...ATTAGAWACCCBDGTAGTCC \
-    -A ^GGACTACHVGGGTWTCTAAT...TTACCGCGGCKGCTGGCAC \
-    -m 215 \
-    -M 285 \
-    --discard-untrimmed \
-    -o B1_sub_R1_trimmed.fq \
-    -p B1_sub_R2_trimmed.fq \
-    B1_sub_R1.fq B1_sub_R2.fq
+   # The module sets $SING_IMAGE, so we can omit image file in command
+   singularity_wrapper exec cutadapt \
+   -a ^GTGCCAGCMGCCGCGGTAA...ATTAGAWACCCBDGTAGTCC \
+   -A ^GGACTACHVGGGTWTCTAAT...TTACCGCGGCKGCTGGCAC \
+   -m 215 \
+   -M 285 \
+   --discard-untrimmed \
+   -o B1_sub_R1_trimmed.fq \
+   -p B1_sub_R2_trimmed.fq \
+   B1_sub_R1.fq B1_sub_R2.fq
 
    ```
+
     💬 Note that in the above example the command line is quite long, so we have used escape charecter "\" to escape (i.e. ignore)
     new line characters. From the computer's point of view the whole singularity_wrapper command is just a single line.
 
@@ -204,6 +208,7 @@ run one such application.
     ```bash
    sbatch cutadapt.sh
     ```
+
 5. In this case the module also includes a wrapper script that allows us to run the program with just `cutadapt`.
 Modify the batch job script so that you change `singularity_wrapper exec cutadapt` to `cutadapt` and re-submit. 
 Does it still work?
