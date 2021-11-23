@@ -106,6 +106,7 @@ data. To use them we must first load the `biokit` module.
     nano mafft.sh
     ```
 2. Copy the following contents into the file and change "project_xxxx" to the correct project name:
+
 ```bash
 #!/bin/bash
 #SBATCH --job-name=test           # Name of the job visible in the queue.
